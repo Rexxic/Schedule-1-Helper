@@ -1,0 +1,20 @@
+{
+    "drug_set": {
+        "Green Crack": {
+            "name": "Green Crack",
+            "value": 40,
+            "mixed_with": {},
+            "creates_with": {
+                "Horse Semen": "White Crack"
+            }
+        },
+        "White Crack": {
+            "name": "White Crack",
+            "value": 40,
+            "mixed_with": {
+                "Horse Semen": "Green Crack"
+            },
+            "creates_with": {}
+        }
+    }
+}
