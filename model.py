@@ -2,7 +2,7 @@ from pydantic import BaseModel
 import json
 import os
 
-DATA_FILE = "drugs.json"
+DATA_FILE = "drug_set.json"
 
 class Drug(BaseModel):
     """
