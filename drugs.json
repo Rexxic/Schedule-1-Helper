@@ -1,20 +1,161 @@
 {
-    "drug_set": {
+    "drugs": {
         "Green Crack": {
             "name": "Green Crack",
+            "value": 43,
+            "mixed_with": {
+                "Cuke": "Green Crack"
+            },
+            "creates_with": {
+                "Cuke": "Green Crack",
+                "Banana": "Aspen Death",
+                "Paracetamol": "Dark Bud",
+                "Viagra": "Dream Puke",
+                "Donut": "Mega Punch",
+                "Flu Medicine": "Aspen Segma",
+                "Mouth Wash": "Fat Cum"
+            }
+        },
+        "Sour Diesel": {
+            "name": "Sour Diesel",
             "value": 40,
             "mixed_with": {},
             "creates_with": {
-                "Horse Semen": "White Crack"
+                "Motor Oil": "Afghan Crystal"
             }
         },
-        "White Crack": {
-            "name": "White Crack",
-            "value": 40,
+        "OG Kush": {
+            "name": "OG Kush",
+            "value": 38,
+            "mixed_with": {},
+            "creates_with": {}
+        },
+        "Granddaddy Purple": {
+            "name": "Granddaddy Purple",
+            "value": 44,
+            "mixed_with": {},
+            "creates_with": {
+                "Viagra": "Big Puke"
+            }
+        },
+        "Aspen Death": {
+            "name": "Aspen Death",
+            "value": 57,
             "mixed_with": {
-                "Horse Semen": "Green Crack"
+                "Banana": "Green Crack"
+            },
+            "creates_with": {}
+        },
+        "Dark Bud": {
+            "name": "Dark Bud",
+            "value": 43,
+            "mixed_with": {
+                "Paracetamol": "Green Crack"
+            },
+            "creates_with": {}
+        },
+        "Dream Puke": {
+            "name": "Dream Puke",
+            "value": 59,
+            "mixed_with": {
+                "Viagra": "Green Crack"
+            },
+            "creates_with": {}
+        },
+        "Mega Punch": {
+            "name": "Mega Punch",
+            "value": 52,
+            "mixed_with": {
+                "Donut": "Green Crack"
+            },
+            "creates_with": {}
+        },
+        "Aspen Smegma": {
+            "name": "Aspen Smegma",
+            "value": 52,
+            "mixed_with": {
+                "Flu Medicine": "Green Crack"
+            },
+            "creates_with": {}
+        },
+        "Fat Cum": {
+            "name": "Fat Cum",
+            "value": 53,
+            "mixed_with": {
+                "Mouth Wash": "Green Crack"
+            },
+            "creates_with": {}
+        },
+        "Afghan Balls": {
+            "name": "Afghan Balls",
+            "value": 113,
+            "mixed_with": {
+                "Cuke": "White Cock"
+            },
+            "creates_with": {}
+        },
+        "White Cock": {
+            "name": "White Cock",
+            "value": 0,
+            "mixed_with": {},
+            "creates_with": {
+                "Cuke": "Afghan Balls"
+            }
+        },
+        "Afghan Crystal": {
+            "name": "Afghan Crystal",
+            "value": 52,
+            "mixed_with": {
+                "Motor Oil": "Sour Diesel"
+            },
+            "creates_with": {}
+        },
+        "Aspen Segma": {
+            "name": "Aspen Segma",
+            "value": 52,
+            "mixed_with": {
+                "Flu Medicine": "Green Crack"
+            },
+            "creates_with": {}
+        },
+        "Banana Thunderfuck": {
+            "name": "Banana Thunderfuck",
+            "value": 72,
+            "mixed_with": {
+                "Chilli": "Slimy Cum"
+            },
+            "creates_with": {}
+        },
+        "Slimy Cum": {
+            "name": "Slimy Cum",
+            "value": 0,
+            "mixed_with": {},
+            "creates_with": {
+                "Chilli": "Banana Thunderfuck"
+            }
+        },
+        "Big Puke": {
+            "name": "Big Puke",
+            "value": 60,
+            "mixed_with": {
+                "Viagra": "Granddaddy Purple"
             },
             "creates_with": {}
         }
+    },
+    "ingridients": {
+        "Cuke": 2,
+        "Flu Medicine": 2,
+        "Gasoline": 2,
+        "Donut": 2,
+        "Energy Drink": 4,
+        "Mouth Wash": 4,
+        "Motor Oil": 4,
+        "Banana": 4,
+        "Chili": 4,
+        "Iodine": 6,
+        "Paracetamol": 6,
+        "Viagra": 6,
+        "Horse Semen": 8
     }
 }
