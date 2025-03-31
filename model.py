@@ -34,7 +34,7 @@ class DrugSet(BaseModel):
         drugs (dict[str, Drug]): A dictionary mapping drug names to Drug objects.
     """
     drugs: dict[str, Drug] = {}
-    ingridients: dict[str, int] = {}
+    ingredients: dict[str, int] = {}
     
     def add_drug(self, name: str, value: int = 0, base: str = "", ingredient: str = ""):
         """
@@ -75,7 +75,7 @@ class DrugSet(BaseModel):
         """
         return self.drugs.get(name)
     
-    def set_ingridient(self, name: str, value: int = 0):
+    def set_ingredient(self, name: str, value: int = 0):
         """
         Adds/Updates an ingridient.
 
