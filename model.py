@@ -35,6 +35,7 @@ class DrugSet(BaseModel):
     """
     drugs: dict[str, Drug] = {}
     ingredients: dict[str, int] = {}
+    render_ingredients: bool = True
     
     def add_drug(self, name: str, value: int = 0, base: str = "", ingredient: str = ""):
         """
