@@ -9,20 +9,20 @@ To run the Tool locally, follow these steps:
 
 ### 1. Clone the Repository:
 
-```bash
+```cmd
 git clone https://github.com/Rexxic/Schedule-1-Helper.git
 cd Schedule-1-Helper
 ```
 ### 2. Install Dependencies:
 Ensure you have Python installed. Then, install the required dependencies:
 
-```bash
+```cmd
 pip install -r Requirements.txt
 ```
 
 ### 3. Run the Application:
 Execute the main script to start the CLI:
-```bash
+```cmd
 python main.py
 ```
 ### 4. ...
