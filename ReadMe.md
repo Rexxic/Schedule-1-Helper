@@ -10,14 +10,14 @@ To run the Tool locally, follow these steps:
 ### 1. Clone the Repository:
 
 ```python
-git clone <repository-url>
-cd drugset-companion-tool
+git clone https://github.com/Rexxic/Schedule-1-Helper.git
+cd Schedule-1-Helper
 ```
 ### 2. Install Dependencies:
 Ensure you have Python installed. Then, install the required dependencies:
 
 ```python
-pip install pyvis pydantic
+pip install -r Requirements.txt
 ```
 
 ### 3. Run the Application:
