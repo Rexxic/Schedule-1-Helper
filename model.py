@@ -83,7 +83,7 @@ class DrugSet(BaseModel):
             name (str): The name of the ingridient.
             value (int): The value of the ingridient.
         """
-        self.ingridients[name] = value
+        self.ingredients[name] = value
         
     def get_ingredient(self, name: str):
         """
@@ -92,7 +92,7 @@ class DrugSet(BaseModel):
         Parameters:
             name (str): The name of the ingridient.
         """
-        return self.ingridients[name] if name in self.ingridients else 0
+        return self.ingredients[name] if name in self.ingredients else 0
 
     def save_to_file(self, filename: str = DATA_FILE):
         """

@@ -8,22 +8,6 @@ def print_help():
     """
     help_text = """
 Available commands:
-    help                - Show this help message.
-    add_drug            - Add a drug. Usage: add_drug <name> [value] [base] [ingredient]
-                          (value is an integer; base and ingredient are optional and should be provided together)
-    get_drug            - Get drug details. Usage: get_drug <name>
-    save                - Save current data to file.
-    render              - Placeholder command for future rendering functionality.
-    exit                - Exit the program.
-    """
-    print(help_text)
-
-def print_help():
-    """
-    Display available commands.
-    """
-    help_text = """
-Available commands:
     help
         - Show this help message.
     add_drug
@@ -60,7 +44,7 @@ def main():
         if not command_input:
             continue
 
-        # Use shlex.split to handle quoted arguments properly
+        # Parse all command line args with respect for quoted strings composited from mutliple words.
         try:
             parts = [str(s).replace('"', '') for s in re.findall(r'"[^"]*"|[\S]+', command_input)]
         except ValueError as e:
