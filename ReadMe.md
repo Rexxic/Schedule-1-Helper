@@ -26,6 +26,7 @@ Execute the main script to start the CLI:
 python main.py
 ```
 ### 4. ...
+You may delete the drug_set.json file to get a clean database
 
 ### 5. Profit!
 

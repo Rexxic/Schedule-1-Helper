@@ -19,6 +19,8 @@ Available commands:
           Usage: get_drug "drug name"
     save
         - Save current data to file.
+    toggle_ingredients
+        - Toggle the rendering of ingredients
     render
         - Placeholder command for future rendering functionality.
     exit
@@ -100,18 +102,25 @@ def main():
             drug_set.save_to_file()
         
         elif command == "render":
-            net = Network(height="1080", directed=True)
+            net = Network(height="1080", directed=True, select_menu=True)
             for name, drug in drug_set.drugs.items():
                 net.add_node(name, title=f"{drug.value}$", value=drug.value, color='#ff3399' if drug.is_base() else '#669900')
-                for ingredient in drug.creates_with:
-                    net.add_node(ingredient, color='#0066ff')
+                if drug_set.render_ingredients:
+                    for ingredient in drug.creates_with:
+                        net.add_node(ingredient, color='#0066ff')
             for name, drug in drug_set.drugs.items():
                 for ingredient, product in drug.creates_with.items():
                     ingredient_value = drug_set.get_ingredient(ingredient)
                     net.add_edge(name, product, title=f"{ingredient}: {ingredient_value}$")
-                    net.add_edge(ingredient, product)
+                    if drug_set.render_ingredients:
+                        net.add_edge(ingredient, product)
             net.toggle_physics(True)
             net.show('nodes.html', notebook=False)
+        
+        elif command == "toggle_ingredients":
+            drug_set.render_ingredients = not drug_set.render_ingredients
+            print(f"render_ingredients: {drug_set.render_ingredients}")
+
         elif command == "exit":
             print("Exiting.")
             break
