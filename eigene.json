@@ -27,7 +27,7 @@
                 "Chili": "Mega Diesel",
                 "Energy Drink": "Ultra Grool",
                 "Motor Oil": "Tokyo Punch",
-                "Big Bean": "Pink Puke"
+                "Mega Bean": "Pink Puke"
             }
         },
         "Granddaddy Purple": {
@@ -45,7 +45,6 @@
             "creates_with": {
                 "Viagra": "OG Queef",
                 "Energy Drink": "Dream Express",
-                "Donut": "Fat Ass",
                 "Flu Medicine": "Banana Cake",
                 "Mouth Wash": "LA Cookies",
                 "Chili": "Miracle Monkey"
@@ -322,7 +321,7 @@
             "name": "Pink Puke",
             "value": 67,
             "mixed_with": {
-                "Big Bean": "Green Crack"
+                "Mega Bean": "Green Crack"
             },
             "creates_with": {
                 "Banana": "California Splooge"

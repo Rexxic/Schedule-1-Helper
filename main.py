@@ -2,6 +2,7 @@ from model import DrugSet
 from pyvis.network import Network
 import re
 
+
 def print_help():
     """
     Display available commands.
@@ -19,6 +20,10 @@ Available commands:
           Usage: get_drug "drug name"
     save
         - Save current data to file.
+          Usage: save ["lanlan.json"]
+    load
+        - Load data from a file.
+          Usage: load ["lanlan.json"]
     toggle_ingredients
         - Toggle the rendering of ingredients
     render
@@ -28,6 +33,7 @@ Available commands:
     """
     print(help_text)
 
+
 def main():
     """
     Main function to run the command line interface.
@@ -35,7 +41,7 @@ def main():
     """
     drug_set = DrugSet.load_from_file()
     print("DrugSet CLI loaded. Type 'help' for available commands.")
-    
+
     while True:
         try:
             command_input = input(">>> ").strip()
@@ -48,7 +54,10 @@ def main():
 
         # Parse all command line args with respect for quoted strings composited from mutliple words.
         try:
-            parts = [str(s).replace('"', '') for s in re.findall(r'"[^"]*"|[\S]+', command_input)]
+            parts = [
+                str(s).replace('"', "")
+                for s in re.findall(r'"[^"]*"|[\S]+', command_input)
+            ]
         except ValueError as e:
             print(f"Error parsing command: {e}")
             continue
@@ -60,10 +69,12 @@ def main():
 
         if command == "help":
             print_help()
-        
+
         elif command == "add_drug":
             if len(parts) < 2:
-                print("Usage: add_drug \"drug name\" [value] [\"base drug name\" \"ingredient\"]")
+                print(
+                    'Usage: add_drug "drug name" [value] ["base drug name" "ingredient"]'
+                )
                 continue
 
             name = parts[1]
@@ -81,15 +92,17 @@ def main():
                 base = parts[3]
                 ingredient = parts[4]
             elif len(parts) not in (2, 3):
-                print("Usage: add_drug \"drug name\" [value] [\"base drug name\" \"ingredient\"]")
+                print(
+                    'Usage: add_drug "drug name" [value] ["base drug name" "ingredient"]'
+                )
                 continue
 
             drug_set.add_drug(name, value, base, ingredient)
             print(f"Drug '{name}' added/updated.")
-        
+
         elif command == "get_drug":
             if len(parts) != 2:
-                print("Usage: get_drug \"drug name\"")
+                print('Usage: get_drug "drug name"')
                 continue
             name = parts[1]
             drug = drug_set.get_drug(name)
@@ -97,26 +110,41 @@ def main():
                 print(drug.model_dump())
             else:
                 print(f"Drug '{name}' not found.")
-        
+
         elif command == "save":
-            drug_set.save_to_file()
-        
+            if len(parts) == 2:
+                drug_set.save_to_file(parts[1])
+            else: drug_set.save_to_file()
+
+        elif command == "load":
+            if len(parts) == 2:
+                drug_set = DrugSet.load_from_file(parts[1])
+            else: drug_set = DrugSet.load_from_file()
+
         elif command == "render":
             net = Network(height="1080", directed=True, select_menu=True)
             for name, drug in drug_set.drugs.items():
-                net.add_node(name, title=f"{drug.value}$", value=drug.value, color='#ff3399' if drug.is_base() else '#669900')
+                net.add_node(
+                    name,
+                    title=f"{drug.value}$",
+                    value=drug.value,
+                    color="#ff3399" if drug.is_base() else "#669900",
+                )
                 if drug_set.render_ingredients:
                     for ingredient in drug.creates_with:
-                        net.add_node(ingredient, color='#0066ff')
+                        net.add_node(ingredient, color="#0066ff")
             for name, drug in drug_set.drugs.items():
                 for ingredient, product in drug.creates_with.items():
                     ingredient_value = drug_set.get_ingredient(ingredient)
-                    net.add_edge(name, product, title=f"{ingredient}: {ingredient_value}$")
+                    net.add_edge(
+                        name, product, title=f"{ingredient}: {ingredient_value}$"
+                    )
                     if drug_set.render_ingredients:
                         net.add_edge(ingredient, product)
             net.toggle_physics(True)
-            net.show('nodes.html', notebook=False)
-        
+            net.show_buttons(filter_=["physics"])
+            net.show("nodes.html", notebook=False)
+
         elif command == "toggle_ingredients":
             drug_set.render_ingredients = not drug_set.render_ingredients
             print(f"render_ingredients: {drug_set.render_ingredients}")
@@ -124,9 +152,10 @@ def main():
         elif command == "exit":
             print("Exiting.")
             break
-        
+
         else:
             print("Unknown command. Type 'help' for available commands.")
+
 
 if __name__ == "__main__":
     main()
