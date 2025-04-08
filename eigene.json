@@ -47,7 +47,8 @@
                 "Energy Drink": "Dream Express",
                 "Flu Medicine": "Banana Cake",
                 "Mouth Wash": "LA Cookies",
-                "Chili": "Miracle Monkey"
+                "Chili": "Miracle Monkey",
+                "Paracetamol": "LA Fuel"
             }
         },
         "Aspen Smegma": {
@@ -64,7 +65,9 @@
             "mixed_with": {
                 "Paracetamol": "Green Crack"
             },
-            "creates_with": {}
+            "creates_with": {
+                "Banana": "Fruity Thunderfuck"
+            }
         },
         "Fat Cum": {
             "name": "Fat Cum",
@@ -95,7 +98,8 @@
                 "Flu Medicine": "OG Cookies",
                 "Gasoline": "Super Cake",
                 "Mouth Wash": "Ice Cream Cake",
-                "Chili": "Island Cum"
+                "Chili": "Island Cum",
+                "Paracetamol": "LA Cheese"
             }
         },
         "Dream Puke": {
@@ -340,6 +344,123 @@
             "value": 62,
             "mixed_with": {
                 "Banana": "Pink Puke"
+            },
+            "creates_with": {}
+        },
+        "LA Fuel": {
+            "name": "LA Fuel",
+            "value": 66,
+            "mixed_with": {
+                "Paracetamol": "Aspen Death"
+            },
+            "creates_with": {
+                "Viagra": "LA Cheese"
+            }
+        },
+        "LA Cheese": {
+            "name": "LA Cheese",
+            "value": 82,
+            "mixed_with": {
+                "Viagra": "LA Fuel",
+                "Paracetamol": "OG Queef"
+            },
+            "creates_with": {}
+        },
+        "Fruity Thunderfuck": {
+            "name": "Fruity Thunderfuck",
+            "value": 65,
+            "mixed_with": {
+                "Banana": "Dark Bud"
+            },
+            "creates_with": {
+                "Donut": "White Express"
+            }
+        },
+        "White Express": {
+            "name": "White Express",
+            "value": 75,
+            "mixed_with": {
+                "Donut": "Fruity Thunderfuck"
+            },
+            "creates_with": {
+                "Viagra": "Bio Rhino"
+            }
+        },
+        "Bio Rhino": {
+            "name": "Bio Rhino",
+            "value": 91,
+            "mixed_with": {
+                "Viagra": "White Express"
+            },
+            "creates_with": {
+                "Mouth Wash": "Stinky Splooge"
+            }
+        },
+        "Stinky Splooge": {
+            "name": "Stinky Splooge",
+            "value": 101,
+            "mixed_with": {
+                "Mouth Wash": "Bio Rhino"
+            },
+            "creates_with": {
+                "Flu Medicine": "Ice Cream Express"
+            }
+        },
+        "Ice Cream Express": {
+            "name": "Ice Cream Express",
+            "value": 111,
+            "mixed_with": {
+                "Flu Medicine": "Stinky Splooge"
+            },
+            "creates_with": {
+                "Gasoline": "Island Rhino"
+            }
+        },
+        "Island Rhino": {
+            "name": "Island Rhino",
+            "value": 104,
+            "mixed_with": {
+                "Gasoline": "Ice Cream Express"
+            },
+            "creates_with": {
+                "Energy Drink": "Bio Dick"
+            }
+        },
+        "Bio Dick": {
+            "name": "Bio Dick",
+            "value": 99,
+            "mixed_with": {
+                "Energy Drink": "Island Rhino"
+            },
+            "creates_with": {
+                "Motor Oil": "Bio Thunderfuck"
+            }
+        },
+        "Bio Thunderfuck": {
+            "name": "Bio Thunderfuck",
+            "value": 94,
+            "mixed_with": {
+                "Motor Oil": "Bio Dick"
+            },
+            "creates_with": {
+                "Mega Bean": "Fat Grool"
+            }
+        },
+        "Fat Grool": {
+            "name": "Fat Grool",
+            "value": 75,
+            "mixed_with": {
+                "Mega Bean": "Bio Thunderfuck"
+            },
+            "creates_with": {
+                "Iodine": "Tokyo Grool"
+            }
+        },
+        "Tokyo Grool": {
+            "name": "Tokyo Grool",
+            "value": 80,
+            "mixed_with": {
+                "Iodine": "Fat Grool"
             },
             "creates_with": {}
         }
