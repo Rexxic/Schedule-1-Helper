@@ -140,7 +140,9 @@
             "mixed_with": {
                 "Donut": "Dream Puke"
             },
-            "creates_with": {}
+            "creates_with": {
+                "Mouth Wash": "Pink Urkle"
+            }
         },
         "Banana Cake": {
             "name": "Banana Cake",
@@ -354,7 +356,8 @@
                 "Paracetamol": "Aspen Death"
             },
             "creates_with": {
-                "Viagra": "LA Cheese"
+                "Viagra": "LA Cheese",
+                "Donut": "Mega Express"
             }
         },
         "LA Cheese": {
@@ -461,6 +464,61 @@
             "value": 80,
             "mixed_with": {
                 "Iodine": "Fat Grool"
+            },
+            "creates_with": {}
+        },
+        "Mega Express": {
+            "name": "Mega Express",
+            "value": 76,
+            "mixed_with": {
+                "Donut": "LA Fuel"
+            },
+            "creates_with": {
+                "Viagra": "Bio Monkey"
+            }
+        },
+        "Pink Urkle": {
+            "name": "Pink Urkle",
+            "value": 78,
+            "mixed_with": {
+                "Mouth Wash": "Slimy Mint"
+            },
+            "creates_with": {}
+        },
+        "Bio Monkey": {
+            "name": "Bio Monkey",
+            "value": 92,
+            "mixed_with": {
+                "Viagra": "Mega Express"
+            },
+            "creates_with": {
+                "Mouth Wash": "Strawberry Grool"
+            }
+        },
+        "Strawberry Grool": {
+            "name": "Strawberry Grool",
+            "value": 102,
+            "mixed_with": {
+                "Mouth Wash": "Bio Monkey"
+            },
+            "creates_with": {
+                "Flu Medicine": "Sweet Ghost",
+                "Gasoline": "Purple Shart"
+            }
+        },
+        "Sweet Ghost": {
+            "name": "Sweet Ghost",
+            "value": 111,
+            "mixed_with": {
+                "Flu Medicine": "Strawberry Grool"
+            },
+            "creates_with": {}
+        },
+        "Purple Shart": {
+            "name": "Purple Shart",
+            "value": 95,
+            "mixed_with": {
+                "Gasoline": "Strawberry Grool"
             },
             "creates_with": {}
         }
